@@ -1,0 +1,212 @@
+:root{
+    --VeryDarkMagenta: hsl(300, 43%, 22%);
+    --DarkGrayishMagenta: hsl(303, 10%, 53%);
+    --LightGrayishMagenta: hsl(300, 24%, 96%);
+    --White: hsl(0, 0%, 100%);
+    --SoftPink: hsl(333, 80%, 67%);
+} 
+*{
+    font-family: 'Spartan', sans-serif;
+    font-size: 15px;
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+}
+#container{
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-row:repeat(5,1fr);
+    grid-gap:1rem;
+   
+}
+header{
+    grid-row:1/2;
+    background: url("../img/bg-pattern-top-mobile.svg");
+    background-repeat: no-repeat;
+}
+header h1{
+    font-weight: 800;
+    font-size: 2rem;
+    color:var(--VeryDarkMagenta);
+    text-align: center;
+    padding:6rem 1.3rem 0 1.3rem;
+}
+header p{
+    font-weight: 400;
+    font-size:0.8rem;
+    color:var(--VeryDarkMagenta);
+    text-align: center;
+    padding:1rem 1.6rem;
+    line-height: 1.1rem; 
+}
+.rate{
+    grid-column: 1;
+    grid-row:2/3;
+    width: 100%;
+    position: relative;
+}
+.user_rate{
+    background-color:var(--LightGrayishMagenta);
+    width:90%;    
+    padding:1rem;
+    border-radius: 0.6rem;
+    text-align: center;
+    margin:0.7rem auto;
+}
+img{
+    padding-bottom: 0.5rem;
+}
+.user_rate p {
+    color:var(--VeryDarkMagenta);
+    font-weight: 700;
+}
+.opinion{
+    grid-row: 3/4;
+    width: 90%;
+    margin:0.7rem auto;
+}
+
+.user_opinions{
+    background-color: var(--VeryDarkMagenta);
+    padding: 1rem;
+    margin-bottom: 1rem;
+    border-radius: 0.6rem;
+}
+
+.user_opinions img{
+    border-radius: 50%;
+    width: 6rem;
+    float: left;
+    padding:1.3rem;
+}
+.user_opinions h4{
+    color:var(--White);
+    margin-top:1.7rem;
+}
+.user_opinions span{
+    color:var(--SoftPink);
+    line-height: 2rem;
+}
+.user_opinions p{
+    clear: both;
+    text-align: left;
+    font-weight: 400;
+    font-size: 1rem;
+    line-height: 1.8rem;
+    padding:1.3rem;
+    color:var(--LightGrayishMagenta)
+
+}
+@media all and (min-width: 900px) {
+    body {
+        background:url(../img/bg-pattern-top-desktop.svg);
+        background-repeat: no-repeat;
+    }
+    #container{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows:1fr 1fr;
+        grid-gap:1rem;
+        
+      
+     }
+     header{
+         grid-column: 1/2;
+         grid-row: 1/2;
+         background-image: none;
+         
+     }
+     header h1{
+        font-weight: 800;
+        font-size: 2.9rem;
+        color:var(--VeryDarkMagenta);
+        text-align: left;
+        margin:2rem 8rem 0 8rem;
+        
+    }
+    header p{
+        font-weight: 400;
+        font-size:1rem;
+        color:var(--VeryDarkMagenta);
+        text-align: left;
+        line-height: 1.5rem; 
+        padding:1rem;
+        margin:0 1rem 0 8.3rem ;
+    }
+
+    
+    .rate{
+        grid-column: 2/3;
+        grid-row:1/2;
+        margin-top:21%;    
+        
+    }
+    .user_rate{
+        background-color:var(--LightGrayishMagenta);
+        width:55%;    
+        padding:0.4rem;
+        border-radius: 0.6rem;
+        text-align: left;
+        margin:0.7rem 0;
+    }
+    .user_rate:nth-child(2){
+        margin-left:2rem;
+
+    }
+    .user_rate:last-child{
+        margin-left:4rem;
+    }
+    img{
+        float:left;
+        padding-left: 0.3rem;    
+        margin-top:0.3rem;   
+    }  
+    .user_rate p {
+        display:inline-block;
+        color:var(--VeryDarkMagenta);
+        clear: both;
+        padding:0.4rem;
+        font-size:0.7rem;
+        margin:0.2rem 1rem;
+    }
+    .opinion{
+        grid-column: 1/3;
+        grid-row: 2/3;
+        margin:0 0 0 8rem ;
+    }
+    .user_opinions{
+        display:inline-block;
+        width:300px;
+        background-color: var(--VeryDarkMagenta);
+        border-radius: 0.6rem;
+        margin:0 0.9rem; 
+    }
+    
+    .user_opinions img{
+        border-radius: 50%;
+        width: 5rem;
+        float: left;
+        padding:1rem;
+    }
+    .user_opinions h4{
+        color:var(--White);
+        margin-top:1.2rem;
+        font-size: 0.8rem;
+    }
+    .user_opinions span{
+        color:var(--SoftPink);
+        line-height: 1.5rem;
+        font-size: 0.8rem;
+    }
+    .user_opinions p{
+        clear: both;
+        text-align: left;
+        font-weight: 400;
+        font-size: 0.8rem;
+        line-height: 1.2rem;
+        padding:1rem;
+        color:var(--LightGrayishMagenta)
+    
+    }
+    
+  } 
